@@ -1,0 +1,57 @@
+$spacer: 0.625 / 2 * 1rem;
+
+@for $i from 0 through 20 {
+    .m-#{$i} {
+        margin: $i * $spacer;
+    }
+    
+    .mx-#{$i} {
+        margin-left: $i * $spacer;
+        margin-right: $i * $spacer;
+    }
+
+    .my-#{$i} {
+        margin-top: $i * $spacer;
+        margin-bottom: $i * $spacer;
+    }
+
+    .-mx-#{$i} {
+        margin-left: -$i * $spacer;
+        margin-right: -$i * $spacer;
+    }
+
+    .mr-#{$i} {
+        margin-right: $i * $spacer !important;
+    }
+
+    .ml-#{$i} {
+        margin-left: $i * $spacer !important;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: $i * $spacer !important;
+    }
+
+    .px-#{$i} {
+        padding-left: $i * $spacer;
+        padding-right: $i * $spacer;
+    }
+
+    .py-#{$i} {
+        padding-top: $i * $spacer;
+        padding-bottom: $i * $spacer;
+    }
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.mx-auto {
+    @extend .ml-auto;
+    @extend .mr-auto;
+}

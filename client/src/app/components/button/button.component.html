@@ -1,0 +1,13 @@
+<a mat-raised-button [routerLink]="href" [target]="target" *ngIf="href">
+    <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
+</a>
+
+<button mat-raised-button *ngIf="!href">
+    <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
+</button>
+
+<ng-template #buttonTemplate>
+    <span class="material-icons" *ngIf="icon && iconPosition === 'left'">{{icon}}</span>
+    <span [class]="hasIcon" icon-position="right"><ng-content></ng-content></span>
+    <span class="material-icons" *ngIf="icon && iconPosition === 'right'">{{icon}}</span>
+</ng-template>

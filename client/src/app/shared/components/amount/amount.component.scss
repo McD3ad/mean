@@ -1,0 +1,16 @@
+.amount {
+    padding: 1rem;
+    border: 2px solid #fff;
+    border-radius: 0.25rem;
+
+    input {
+        font-size: 1.25rem;
+        border: none;
+        appearance: none;
+        background-color: transparent;
+        display: block;
+        width: 100%;
+        outline: none !important;
+        color: #fff;
+    }
+}

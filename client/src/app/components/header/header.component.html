@@ -1,0 +1,29 @@
+<mat-toolbar>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <a routerLink="/todos" mat-menu-item>
+            <mat-icon>dns</mat-icon>
+            <span>Todos list</span>
+        </a>
+        <a routerLink="/todos/add" mat-menu-item>
+            <mat-icon>queue</mat-icon>
+            <span>Add new todo</span>
+        </a>
+    </mat-menu>
+    <a routerLink="/" class="logo">Todos</a>
+    <div class="ml-auto">
+        <ng-container *ngIf="authService.isLoggedIn">
+            <a mat-raised-button routerLink="/profile">
+                <mat-icon class="mr-1">account_circle</mat-icon>
+                {{ authService.user.name }}
+            </a>
+        </ng-container>
+
+        <ng-container *ngIf="!authService.isLoggedIn">
+            <a routerLink="/login" class="mr-1" mat-raised-button>Login</a>
+            <a routerLink="/register" color="warn" mat-raised-button>Register</a>
+        </ng-container>
+    </div>
+</mat-toolbar>

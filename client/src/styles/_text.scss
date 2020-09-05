@@ -1,0 +1,11 @@
+@each $position in ('left', 'center', 'right')  {
+    .text-#{$position} {
+        text-align: #{$position};
+    }
+}
+
+@each $name, $size in (sm 0.8rem, normal 1rem, lg 1.25rem) {
+    .text-#{$name} {
+        font-size: $size;
+    }
+}

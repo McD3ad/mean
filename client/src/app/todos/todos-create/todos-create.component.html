@@ -1,0 +1,19 @@
+<form [formGroup]="create" class="mx-auto" (submit)="onSubmit()">
+
+    <mat-form-field class="w-full mb-4" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput type="text" formControlName="title" required>
+    </mat-form-field>
+
+    <mat-form-field class="w-full mb-4" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <div class="mb-4">
+        <mat-checkbox formControlName="isCompleted">Completed</mat-checkbox>
+    </div>
+
+    <button class="w-full" mat-raised-button color="primary">Create todo</button>
+
+</form>

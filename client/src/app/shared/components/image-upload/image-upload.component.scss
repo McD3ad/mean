@@ -1,0 +1,14 @@
+label {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    
+    input {
+        position: absolute;
+        opacity: 0;
+    }
+}
