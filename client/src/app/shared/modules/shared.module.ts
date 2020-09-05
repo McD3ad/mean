@@ -5,7 +5,6 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material.module';
 import { CommonModule } from '@angular/common';
-import { AmountComponent } from '../components/amount/amount.component';
 import { ImageUploadComponent } from '../components/image-upload/image-upload.component';
 import { CurrencyService } from '../services/currency.service';
 
@@ -19,7 +18,6 @@ const MODULES = [
 
 const COMPONENTS = [
   ButtonComponent,
-  AmountComponent,
   ImageUploadComponent
 ];
 
