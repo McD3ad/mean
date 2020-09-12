@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material.module';
 import { CommonModule } from '@angular/common';
 import { ImageUploadComponent } from '../components/image-upload/image-upload.component';
-import { CurrencyService } from '../services/currency.service';
 
 const MODULES = [
   RouterModule,
@@ -21,14 +20,9 @@ const COMPONENTS = [
   ImageUploadComponent
 ];
 
-const SERVICES = [
-  CurrencyService
-];
-
 @NgModule({
   declarations: COMPONENTS,
   imports: [...MODULES, CommonModule],
-  exports: [...MODULES, ...COMPONENTS, ...SERVICES],
-  providers: SERVICES
+  exports: [...MODULES, ...COMPONENTS]
 })
 export class SharedModule { }

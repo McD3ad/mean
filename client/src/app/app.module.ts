@@ -17,6 +17,7 @@ import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 import { HeaderComponent } from './components/header/header.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { WysiwygComponent } from './shared/components/wysiwyg/wysiwyg.component';
+import { TemplateComponent } from './shared/components/template/template.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { WysiwygComponent } from './shared/components/wysiwyg/wysiwyg.component'
     HomeComponent,
     NotFoundComponent,
     HeaderComponent,
-    WysiwygComponent
+    WysiwygComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,
